@@ -1,0 +1,8 @@
+#ignore everything
+*
+!*.cpp
+!*.h
+!*.H
+!*/
+!.gitignore
+!.vscode/*
