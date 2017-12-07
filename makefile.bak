@@ -1,0 +1,24 @@
+#
+#
+#	Assignment 8 - Makefile
+#	Student Number: 3020946
+#	Name: Lucas Martin-Tully
+#	Purpose: 
+#
+
+CC=g++
+CXXFLAGS= -std=c++11 -w -g -o
+
+
+assignment8: assignment8.o demographics.o
+	$(CC) $(CXXFLAGS) -o assignment8 demographics.o assignment8.o
+
+assignment8.o: assignment8.cpp
+	$(CC) $(CXXFLAGS) -c assignment8.cpp
+
+demographics.o: demographics.cpp
+	$(CC) $(CXXFLAGS) -c demographics.cpp
+
+
+clean:
+	rm *.o assignment8; rm -r *.dSYM;

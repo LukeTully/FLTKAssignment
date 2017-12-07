@@ -4,5 +4,11 @@
 !*.h
 !*.H
 !*/
+!*.csv
+!*.txt
+!*.bak
+!*.json
+!*.jpg
+!*.png
 !.gitignore
 !.vscode/*
