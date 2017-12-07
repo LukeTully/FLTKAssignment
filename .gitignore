@@ -10,5 +10,6 @@
 !*.json
 !*.jpg
 !*.png
+!makefile
 !.gitignore
 !.vscode/*
