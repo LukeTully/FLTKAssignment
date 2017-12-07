@@ -68,14 +68,13 @@ int main() {
     constexpr int xspace = 40;  // space beyond axis
     constexpr int yspace = 40;
 
-    constexpr int ymaxval = 32000; // Largest number in the set
+    constexpr int ymaxval = 32000;  // Largest number in the set
 
     constexpr int xlength = xmax - xoffset - xspace;  // length of axes
     constexpr int ylength = ymax - yoffset - yspace;
 
     constexpr double xscale = double(xlength) / (end_year - base_year);
     constexpr double yscale = double(ylength) / ymaxval;
-
 
     // Create x and y scales
     Scale xs{xoffset, base_year, xscale};
@@ -101,8 +100,9 @@ int main() {
 
     // Draw some y axis labels
     for (size_t i = 0; i < 11; i++) {
-      Text* ystep =
-          new Text(Point(xoffset-55, ymax - yoffset - ((ylength/10) * i) + 4), std::to_string(i * (ymaxval/10)));
+      Text* ystep = new Text(
+          Point(xoffset - 55, ymax - yoffset - ((ylength / 10) * i) + 4),
+          std::to_string(i * (ymaxval / 10)));
       win.attach(*ystep);
     }
 
