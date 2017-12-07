@@ -2,7 +2,7 @@
 #include "libraries/GUI.h"
 #include "libraries/Graph.h"
 #include "libraries/Window.h"
-#include "line_window.h"
+#include "libraries/line_window.h"
 #include <exception>
 
 int main() {
