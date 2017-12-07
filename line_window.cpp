@@ -7,32 +7,6 @@
 
 using namespace Graph_lib;
 
-void Lines_window::cb_red(Address, Address pw)  // "the usual"
-{
-  reference_to<Lines_window>(pw).red_pressed();
-}
-
-//------------------------------------------------------------------------------
-
-void Lines_window::cb_blue(Address, Address pw)  // "the usual"
-{
-  reference_to<Lines_window>(pw).blue_pressed();
-}
-
-//------------------------------------------------------------------------------
-
-void Lines_window::cb_black(Address, Address pw)  // "the usual"
-{
-  reference_to<Lines_window>(pw).black_pressed();
-}
-
-//------------------------------------------------------------------------------
-
-void Lines_window::cb_menu(Address, Address pw)  // "the usual"
-{
-  reference_to<Lines_window>(pw).menu_pressed();
-}
-
 Lines_window::Lines_window(Point xy, int w, int h, const string& title)
     : Window{xy, w, h, title},
       next_button{
@@ -43,9 +17,7 @@ Lines_window::Lines_window(Point xy, int w, int h, const string& title)
           [](Address, Address pw) { reference_to<Lines_window>(pw).quit(); }},
       next_x{Point{x_max() - 310, 0}, 50, 20, "next x:"},
       next_y{Point{x_max() - 210, 0}, 50, 20, "next y:"},
-      xy_out{Point(100, 0), 100, 20, "current (x,y):"},
-      color_menu(Point(x_max() - 70, 30), 70, 20, Menu::vertical, "color"),
-      menu_button(Point(x_max() - 80, 30), 80, 20, "color menu", cb_menu) {
+      xy_out{Point(100, 0), 100, 20, "current (x,y):"} {
   attach(next_button);
   attach(quit_button);
   attach(next_x);
@@ -53,12 +25,7 @@ Lines_window::Lines_window(Point xy, int w, int h, const string& title)
   attach(xy_out);
 
   xy_out.put("no point");
-  color_menu.attach(new Button(Point(0, 0), 0, 0, "red", cb_red));
-  color_menu.attach(new Button(Point(0, 0), 0, 0, "blue", cb_blue));
-  color_menu.attach(new Button(Point(0, 0), 0, 0, "black", cb_black));
-  attach(color_menu);
-  color_menu.hide();
-  attach(menu_button);
+
   attach(lines);
 }
 void Lines_window::next() {
