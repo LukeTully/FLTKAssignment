@@ -1,9 +1,9 @@
 
 #include "line_window.h"
 #include <sstream>
-#include "libraries/GUI.h"
-#include "libraries/Graph.h"
-#include "libraries/Window.h"
+#include "GUI.h"
+#include "Graph.h"
+#include "Window.h"
 
 using namespace Graph_lib;
 

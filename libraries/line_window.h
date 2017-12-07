@@ -1,6 +1,6 @@
-#include "libraries/GUI.h"
-#include "libraries/Graph.h"
-#include "libraries/Window.h"
+#include "GUI.h"
+#include "Graph.h"
+#include "Window.h"
 
 #ifndef LINE_WINDOW_H
 #define LINE_WINDOW_H
