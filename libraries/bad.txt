@@ -1,3 +1,0 @@
-station:            ST-CLAUDE Tmean= -99 Tmax= -99 Tmin= -99 Precipitation=    67 mm over 8 days
-station:  GEORGE-ISLAND-(AUT) Tmean=14.7 Tmax=22.7 Tmin=   7 Precipitation=   -99 mm over -99 days
-station:     GIMLI-HARBOUR-CS Tmean=14.6 Tmax=25.2 Tmin= 4.4 Precipitation=   -99 mm over -99 days
