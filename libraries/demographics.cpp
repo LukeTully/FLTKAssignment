@@ -12,6 +12,8 @@ using namespace std;
 // Streaming in to Demographic
 istream& operator>>(istream& is, Demographic& demo) {
   is >> demo.yr;
+
+  // Parse a workable int from the comma delimited ints
   parseSpecialInt(is, demo.births);
   parseSpecialInt(is, demo.deaths);
   parseSpecialInt(is, demo.emmigrants);
@@ -38,7 +40,7 @@ istream& operator>>(istream& is, YearRange& yr) {
   int yearStart = 0;
   int yearEnd = 0;
 
-  // Get the current year
+  // Get the current year and set up validation
   time_t t = time(NULL);
   tm* timePtr = localtime(&t);
   int maxYear = timePtr->tm_year + 1900;
@@ -84,21 +86,25 @@ istream& parseSpecialInt(istream& is, int& numeric) {
   // Where should we stop parsing the stream?
   const char delimiter = ',';
   const char terminator = '"';
+
+  // Determine if we've reached the end of the portion of the stream we should be parsing
   int termCount = 0;
   int maxTermCount = 2;
   int result = 0;
   string strResult("");
+
   while (is >> ch && termCount < maxTermCount) {
     switch (ch) {
       case terminator:
         termCount++;
       case delimiter:
         if (termCount == 1) {
+          // Replace the thousands delimiter with a thousands calculation before adding the remaining digits
           result *= 1000;
         }
         continue;
       default:
-        // Determine if the current char is a number
+        // Determine if the current char is a number by trying to extract it from the stream
         is.unget();
         int temp;
         is >> temp;
@@ -108,6 +114,8 @@ istream& parseSpecialInt(istream& is, int& numeric) {
       break;
     }
   }
+
+  // Reassion our result
   numeric = result;
 
   if (!is && !is.eof()) {
