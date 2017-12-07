@@ -1,9 +1,8 @@
 #
-#
 #	Assignment 8 - Makefile
 #	Student Number: 3020946
 #	Name: Lucas Martin-Tully
-#	Purpose: 
+#	Purpose: make the files associated with the entire assignment
 #
 
 FLTK_CONFIG=/usr/local/opt/fltk/bin/fltk-config

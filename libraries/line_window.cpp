@@ -1,3 +1,9 @@
+/*
+    Assignment 8 - Question 3 - line_window.cpp
+    Student Number: 3020946
+    Name: Lucas Martin-Tully
+    Purpose: Add input and outboxes and start the project
+*/
 
 #include "line_window.h"
 #include <sstream>

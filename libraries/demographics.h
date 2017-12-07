@@ -1,3 +1,9 @@
+/*
+    Assignment 8 - Question 1,2 - demographics.h
+    Student Number: 3020946
+    Name: Lucas Martin-Tully
+    Purpose: Read data from csv definition
+*/
 
 #ifndef DEMO_H
 #define DEMO_H

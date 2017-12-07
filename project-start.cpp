@@ -1,3 +1,9 @@
+/*
+    Assignment 8 - Question 3 - project-start.cpp
+    Student Number: 3020946
+    Name: Lucas Martin-Tully
+    Purpose: Create the custom window required for question 3
+*/
 
 #include "libraries/GUI.h"
 #include "libraries/Graph.h"

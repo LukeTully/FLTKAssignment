@@ -1,3 +1,10 @@
+/*
+    Assignment 8 - Question 3 - line-window.h
+    Student Number: 3020946
+    Name: Lucas Martin-Tully
+    Purpose: Define the custom window for question 3
+*/
+
 #include "GUI.h"
 #include "Graph.h"
 #include "Window.h"
