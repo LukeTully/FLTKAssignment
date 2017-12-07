@@ -19,7 +19,7 @@
 #include "./libraries/Graph.h"
 #include "./libraries/Point.h"
 #include "Simple_window.h"
-#include "demographics.h"
+#include "libraries/demographics.h"
 
 double slope(double x) { return x / 2; }
 double sloping_cos(double x) { return cos(x) + slope(x); }
